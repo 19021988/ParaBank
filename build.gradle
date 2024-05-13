@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id "io.qameta.allure" version "2.11.2"
+}
+
+group 'org.jaanTesting'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.github.bonigarcia:webdrivermanager:5.7.0'
+    implementation 'com.codeborne:selenide:7.2.0'
+    implementation 'io.rest-assured:json-schema-validator:5.4.0'
+    implementation 'io.qameta.allure:allure-selenide:2.26.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testImplementation 'io.qameta.allure:allure-junit5:2.26.0'
+    testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.6'
+
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
